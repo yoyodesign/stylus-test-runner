@@ -28,9 +28,13 @@ function stylusTestRunner(customConfig) {
 
   root.config = _.merge({}, defaultConfig, customConfig);
 
-  new Mocha(config.mocha)
+  const result = new Mocha(config.mocha)
   .addFile(__dirname + '/runner')
-  .run();
+  .run((failures) => {
+      process.on(`exit`, () => {
+         process.exit(failures);
+      });
+  });
 }
 
 
