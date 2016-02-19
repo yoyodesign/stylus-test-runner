@@ -6,7 +6,7 @@
   "author": "Tim Gleeson",
   "repository": {
     "type": "git",
-    "url": "git://github.com:timjgleeson/stylus-test-runner.git"
+    "url": "git://github.com:yoyodesign/stylus-test-runner.git"
   },
   "dependencies": {
     "mocha": "~1.17.1",
